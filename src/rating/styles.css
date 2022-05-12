@@ -2,14 +2,23 @@ body {
   font-family: sans-serif;
 }
 
-ul {
+.app {
+  height: 100%;
+  width: 100%;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stars {
   list-style-type: none;
   display: flex;
   flex-direction: row;
   font-size: 30px;
 }
 
-li {
+.stars > li {
   margin: 5px;
 }
 
