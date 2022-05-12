@@ -5,10 +5,20 @@ body {
 .app {
   height: 100%;
   width: 100%;
-  border: 2px solid black;
+  border: 4px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 20px;
+}
+
+.ratingContainer {
+  border: 4px solid blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
 }
 
 .stars {
@@ -16,6 +26,10 @@ body {
   display: flex;
   flex-direction: row;
   font-size: 30px;
+}
+
+.stars:hover {
+  cursor: pointer;
 }
 
 .stars > li {
