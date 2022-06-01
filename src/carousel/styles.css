@@ -1,0 +1,55 @@
+.app {
+  position: relative;
+  display: flex;
+  height: calc(100vh - 200px);
+  width: calc(100vw - 100px);
+  border: 5px solid black;
+  margin: auto;
+}
+
+.carousel-image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.before {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  content: "<";
+  color: white;
+  width: 100px;
+  height: 100%;
+  background-color: blue;
+  opacity: 0.5;
+  left: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+.before:hover {
+  opacity: 0.7;
+}
+
+.after {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  content: ">";
+  color: white;
+  width: 100px;
+  height: 100%;
+  background-color: blue;
+  opacity: 0.5;
+  right: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+.after:hover {
+  opacity: 0.7;
+}
