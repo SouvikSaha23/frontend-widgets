@@ -18,11 +18,17 @@ function mainAutomatic() {
     currentIndex =
       (currentIndex - 1 + imageSrcList.length) % imageSrcList.length;
     imgElement.src = imageBasePath + imageSrcList[currentIndex];
+    imgElement.onload = () => {
+      renderDots(currentIndex);
+    };
   };
 
   const renderNextImage = () => {
     currentIndex = (currentIndex + 1) % imageSrcList.length;
     imgElement.src = imageBasePath + imageSrcList[currentIndex];
+    imgElement.onload = () => {
+      renderDots(currentIndex);
+    };
   };
 
   const startSlideShow = () => {
@@ -62,3 +68,15 @@ function mainAutomatic() {
 }
 
 mainAutomatic();
+
+const renderDots = (currentIndex) => {
+  const dotsContainer = document.getElementById("dots-automatic");
+  const dotsCount = dotsContainer.childElementCount;
+  for (let i = 0; i < dotsCount; i++) {
+    if (i === currentIndex) {
+      dotsContainer.children[i].classList.add("active-dot");
+    } else {
+      dotsContainer.children[i].classList.remove("active-dot");
+    }
+  }
+};
